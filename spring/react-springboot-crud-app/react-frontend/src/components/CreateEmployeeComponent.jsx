@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import EmployeeService from "../services/EmployeeService";
 
 class CreateEmployeeComponent extends Component {
@@ -42,7 +42,7 @@ class CreateEmployeeComponent extends Component {
     console.log(JSON.stringify(employee));
     // save data to the db using the axios service
     EmployeeService.createEmployee(employee).then((res) => {
-      return <Navigate to="/" />;
+      return <Navigate to="/employees" />;
     });
   };
 
