@@ -21,19 +21,23 @@ public class StrCompress {
             prev = ch;
         }
 
-        res += "vpwqy1iu7926";
-
-        str = "";
-        len = res.length();
-        for (int i = 0; i < len; i++) {
-            ch = res.charAt(i);
-            if (i % 4 == 3) {
-                ch = '_';
-            }
-            str += (char) ch;
-        }
-        return str;
+        StringBuilder output = new StringBuilder(res);
+        StringBuilder token = new StringBuilder("5jyps1lx3af");
+        return output.reverse() + ":" + token.reverse();
     }
+    // String temp = "";
+    // str = "g9a7wcd6f";
+    // len = res.length();
+    // for (int i = 0; i < len; i++) {
+    // ch = res.charAt(i);
+    // if (str.contains("" + ch)) {
+    // temp += "--" + ch + "--";
+    // } else {
+    // temp += ch;
+    // }
+    // }
+    // return temp;
+    // }
 
     public static void main(String[] args) {
         String input;

@@ -1,14 +1,27 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import EmployeeService from "../services/EmployeeService";
 
-const CreateEmployeeComponent = (props) => {
+const UpdateEmployeeComponent = (props) => {
   const [employee, setEmployee] = useState({
+    id: useParams().id,
     firstName: "",
     lastName: "",
     emailId: "",
   });
+
+  useEffect(() => {
+    EmployeeService.getEmployeeById(employee.id)
+      .then((res) => {
+        let emp = res.data;
+        setEmployee({ ...emp });
+      })
+      .catch((error) => {
+        alert("Unable to get Data: " + error);
+      });
+  }, []);
 
   const navigate = useNavigate();
 
@@ -18,7 +31,7 @@ const CreateEmployeeComponent = (props) => {
     setEmployee({ ...employee, [name]: value });
   };
 
-  const saveEmployee = (e) => {
+  const updateEmployee = (e) => {
     e.preventDefault();
     let emp = {
       firstName: employee.firstName,
@@ -27,9 +40,9 @@ const CreateEmployeeComponent = (props) => {
     };
 
     // save data to the db using the axios service
-    EmployeeService.createEmployee(emp)
+    EmployeeService.updateEmployee(employee.id, emp)
       .then((res) => {
-        navigate("/employees");
+        navigate("/");
       })
       .catch((error) => {
         alert(error);
@@ -41,7 +54,7 @@ const CreateEmployeeComponent = (props) => {
       <div className="container my-3">
         <div className="row">
           <div className="card col-md-6 offset-md-3">
-            <h3 className="text-center my-3">Add Employee</h3>
+            <h3 className="text-center my-3">Update Employee</h3>
             <div className="card-body">
               <form>
                 <div className="form-group my-4">
@@ -83,10 +96,10 @@ const CreateEmployeeComponent = (props) => {
 
                 <button
                   type="submit"
-                  onClick={saveEmployee}
+                  onClick={updateEmployee}
                   className="btn btn-success"
                 >
-                  Save
+                  Update
                 </button>
                 <Link to="/" className="btn btn-danger mx-3">
                   Cancel
@@ -99,5 +112,4 @@ const CreateEmployeeComponent = (props) => {
     </div>
   );
 };
-
-export default CreateEmployeeComponent;
+export default UpdateEmployeeComponent;

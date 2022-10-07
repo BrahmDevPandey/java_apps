@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import EmployeeService from "../services/EmployeeService";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 class ListEmployeeComponent extends Component {
   constructor(props) {
@@ -9,6 +9,8 @@ class ListEmployeeComponent extends Component {
     this.state = {
       employees: [],
     };
+    const { navigate } = props;
+    this.navigate = navigate;
   }
 
   componentDidMount() {
@@ -17,6 +19,23 @@ class ListEmployeeComponent extends Component {
         employees: res.data,
       });
     });
+  }
+
+  editEmployee(id) {
+    this.navigate(`/update-employee/${id}`);
+  }
+
+  deleteEmployee(id) {
+    EmployeeService.deleteEmployee(id).then((res) => {
+      // this.componentDidMount();
+      this.setState({
+        employees: this.state.employees.filter((emp) => emp.id !== id),
+      });
+    });
+  }
+
+  viewEmployee(id) {
+    this.navigate(`/view-employee/${id}`);
   }
 
   render() {
@@ -43,6 +62,26 @@ class ListEmployeeComponent extends Component {
                   <td>{emp.firstName}</td>
                   <td>{emp.lastName}</td>
                   <td>{emp.emailId}</td>
+                  <td>
+                    <button
+                      className="btn btn-info"
+                      onClick={() => this.editEmployee(emp.id)}
+                    >
+                      Update
+                    </button>
+                    <button
+                      className="btn btn-danger mx-3"
+                      onClick={() => this.deleteEmployee(emp.id)}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      className="btn btn-success"
+                      onClick={() => this.viewEmployee(emp.id)}
+                    >
+                      View
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -53,4 +92,10 @@ class ListEmployeeComponent extends Component {
   }
 }
 
-export default ListEmployeeComponent;
+// export default ListEmployeeComponent;
+// Wrap and export
+export default function (props) {
+  const navigate = useNavigate();
+
+  return <ListEmployeeComponent {...props} navigate={navigate} />;
+}
