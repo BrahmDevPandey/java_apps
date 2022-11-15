@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User Data</title>
+
+<style>
+	.main-container {
+		text-align: center;
+		font-size: 20px;
+	}
+	
+	input, button {
+		font-size: 20px;
+	}
+	
+	div {
+		margin: 15px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="main-container">
+		<form action="/FirstServlet/InputServlet" method="get">
+			<div>
+				<label for="name">Name:</label>
+				<input type="text" placeholder="Enter your name" name="name">
+			</div>
+			<div>
+				<label for="age">Age</label>
+				<input type="number" placeholder="Enter your age" name="age">
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,29 +1,30 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StrCompress {
     public static String StringChallenge(String str) {
         String res = "";
-        str += '.'; // sentinel character
-        int len = str.length();
+        char arr[] = str.toCharArray();
+        Arrays.sort(arr);
+        int len = arr.length;
         int count = 1;
-        char prev = str.charAt(0);
+        char prev = arr[0];
         char ch;
 
         for (int i = 1; i < len; i++) {
-            ch = str.charAt(i);
+            ch = arr[i];
             if (prev == ch) {
                 count++;
             } else {
-                res += count;
                 res += prev;
+                res += count;
                 count = 1;
             }
             prev = ch;
         }
-
-        StringBuilder output = new StringBuilder(res);
-        StringBuilder token = new StringBuilder("5jyps1lx3af");
-        return output.reverse() + ":" + token.reverse();
+        res += prev;
+        res += count;
+        return res;
     }
     // String temp = "";
     // str = "g9a7wcd6f";
