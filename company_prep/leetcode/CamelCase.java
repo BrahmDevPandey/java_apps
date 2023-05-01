@@ -22,7 +22,7 @@ public class CamelCase {
             }
         }
         input1 = res;
-w
+
         System.out.println(input1);
         char ch[] = input1.toCharArray();
         int res_ind = 0;

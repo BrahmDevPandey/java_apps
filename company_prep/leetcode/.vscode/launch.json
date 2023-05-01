@@ -1,0 +1,189 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MaxVolContainer",
+      "request": "launch",
+      "mainClass": "MaxVolContainer",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "AdjacentDuplicates",
+      "request": "launch",
+      "mainClass": "AdjacentDuplicates",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "RainWater",
+      "request": "launch",
+      "mainClass": "RainWater",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "Bleak",
+      "request": "launch",
+      "mainClass": "Bleak",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "ButterflyPattern",
+      "request": "launch",
+      "mainClass": "ButterflyPattern",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "CamelCase",
+      "request": "launch",
+      "mainClass": "CamelCase",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "CaseChange",
+      "request": "launch",
+      "mainClass": "CaseChange",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "Decree",
+      "request": "launch",
+      "mainClass": "Decree",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "LinkedListFull",
+      "request": "launch",
+      "mainClass": "LinkedListFull",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MPattern",
+      "request": "launch",
+      "mainClass": "MPattern",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MajorityElement",
+      "request": "launch",
+      "mainClass": "MajorityElement",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MaxPrft",
+      "request": "launch",
+      "mainClass": "MaxPrft",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MaxProfit",
+      "request": "launch",
+      "mainClass": "MaxProfit",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MaxRobbery",
+      "request": "launch",
+      "mainClass": "MaxRobbery",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MergeSorted",
+      "request": "launch",
+      "mainClass": "MergeSorted",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "MinSquares",
+      "request": "launch",
+      "mainClass": "MinSquares",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "Plotting",
+      "request": "launch",
+      "mainClass": "Plotting",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "ProdOfSum",
+      "request": "launch",
+      "mainClass": "ProdOfSum",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "Repeated",
+      "request": "launch",
+      "mainClass": "Repeated",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "StockMax",
+      "request": "launch",
+      "mainClass": "StockMax",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "StrCompress",
+      "request": "launch",
+      "mainClass": "StrCompress",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "StrGCD",
+      "request": "launch",
+      "mainClass": "StrGCD",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "StrRearrange",
+      "request": "launch",
+      "mainClass": "StrRearrange",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "Troops",
+      "request": "launch",
+      "mainClass": "Troops",
+      "projectName": "leetcode_741f3254"
+    },
+    {
+      "type": "java",
+      "name": "ZigZag",
+      "request": "launch",
+      "mainClass": "ZigZag",
+      "projectName": "leetcode_741f3254"
+    }
+  ]
+}
